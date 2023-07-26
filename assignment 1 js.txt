@@ -1,0 +1,77 @@
+Question 5:
+
+function isprime(number)
+{
+    if(number>1)
+    {
+        for(var i=2;i<=Math.sqrt(number);i++)
+            {
+            if(number%i==0)
+                return false;
+            }
+        return true;
+    }
+    else
+        console.log("number is less than 1");
+}
+
+Question 6:
+function isarmstrong(number)
+{
+
+var digits = number.toString().split('');
+var n=digits.length;
+var sum=0;
+
+for(var i=0;i<digits.length;i++)
+{
+sum=sum+(parseInt(digits[i])**n);
+}
+if(sum===number)
+return true;
+else
+return false;
+}
+
+Question 7:
+
+function add()
+{
+console.log(arguments);
+console.log(arguments.length);
+var sum=0;
+for(var i=0;i<arguments.length;i++)
+{
+if(isNumber(arguments[i]==true)
+sum=sum+arguments[i];
+else
+{
+if(typeof arguments[i]===string)
+{
+if(arguments[i]>'a'||arguments[i]<'z'||arguments[i]>'A'||arguments[i]>'Z')
+{arguments[i]=0;
+sum+=arguments[i];}
+else
+{
+arguments[i]=parseInt(arguments[i]);
+sum+=arguments[i];
+}
+}
+}
+if(isNaN(arguments[i])
+{
+arguments[i]=0;
+sum+=arguments[i];
+}
+
+
+}
+
+}
+return sum;
+}
+
+
+
+
+ 
