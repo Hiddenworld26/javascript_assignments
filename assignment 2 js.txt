@@ -1,0 +1,110 @@
+question 2:
+
+function add(...args) {
+  let result = 0;
+
+  for (const arg of args) {
+    if (typeof arg === "number") {
+      result += arg;
+    } else if (typeof arg === "string" && !isNaN(Number(arg))) {
+      result += Number(arg);
+    } else if (Array.isArray(arg)) {
+      result += add(...arg);
+    } else if (typeof arg === "function") {
+      result += add(arg());
+    }
+  }
+
+  return result;
+}
+function one() {
+  return 1;
+}
+
+function two() {
+  return "2";
+}
+
+question 2:
+function add()
+{
+console.log(arguments);
+console.log(arguments.length);
+let result=0;
+for(var i=0;i<arguments.length;i++)
+{
+ if (typeof arg === "number") {
+      result += arg;
+    } else if (typeof arg === "string" && !isNaN(Number(arg))) {
+      result += Number(arg);
+    } else if (Array.isArray(arg)) {
+      result += add(...arg);
+    } else if (typeof arg === "function") {
+      result += add(arg());
+    }
+
+}
+return result;
+}
+
+question 3:
+
+SPREAD
+
+Spread using with array:
+var originalArray = [1, 2, 3];
+var newArray = [...originalArray, 4, 5];
+
+console.log(newArray);
+
+Spread using with object:
+const originalObject = { a: 1, b: 2 };
+const newObject = { ...originalObject, c: 3 };
+
+console.log(newObject); 
+
+REST
+
+function sum(...numbers) {
+var sum=0;
+  for(var i=0;i<numbers.length;i++)
+{
+sum+=numbers[i];
+}
+
+}
+
+console.log(sum(1, 2, 3, 4, 5)); 
+
+question 4:
+function time(){
+const currentDate = new Date();
+const day = currentDate.getDate();
+const hours = currentDate.getHours();
+const minutes = currentDate.getMinutes();
+const seconds = currentDate.getSeconds();
+
+console.log(`${hours}:${minutes}:${seconds}`);
+}
+
+question 5:
+function time()
+{
+const currentDate = new Date();
+
+const year = currentDate.getFullYear();
+const month = currentDate.getMonth(); 
+
+console.log(`${year}-${month + 1}-${day}`); 
+}
+
+
+
+
+
+
+
+
+
+
+
