@@ -1,4 +1,8 @@
+
+
 question 1:
+
+# named functions:
 
 function area_perimeter(){
     
@@ -16,4 +20,41 @@ function area_perimeter(){
     
 }
 
-u
+const area = (l=parseInt(prompt("l")),b=parseInt(prompt("b"))) => l*b;
+
+# arrow functions: - It saved from hoesting
+
+const area = (l=parseInt(prompt("l")),b=parseInt(prompt("b"))) => l*b;
+const perimeter = (l=parseInt(prompt("l")),b=parseInt(prompt("b"))) => 2*(l+b);
+
+# anonymous functions:
+function area_perimeter()
+{
+var perimeter=function (l,b)
+{
+return 2*(l+b);
+}
+var area=function (l,b);
+{
+return l*b;
+}
+return [perimeter,area];
+}
+
+# namely functions:
+
+function area_perimeter()
+{
+var perimeter=function perimeter(l,b)
+{
+return 2*(l+b);
+}
+var area=function area(l,b);
+{
+return l*b;
+}
+return [perimeter,area];
+}
+
+
+
